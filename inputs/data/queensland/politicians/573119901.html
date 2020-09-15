@@ -1,0 +1,755 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-AU" xml:lang="en-AU" xmlns="http://www.w3.org/1999/xhtml">
+<head profile="">
+<title>
+	Former Members Bio - 
+  
+  Queensland Parliament
+
+</title>
+<!-- META DATA --><link rel="schema.DCTERMS" href="https://purl.org/dc/terms/">
+<link rel="schema.AGLSTERMS" href="https://www.agls.gov.au/agls/terms/">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="-1">
+<meta name="CODE_LANGUAGE" content="C#">
+<meta name="vs_defaultClientScript" content="JavaScript">
+<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+<meta name="DCTERMS.creator" scheme="AGLSTERMS.GOLD" content="c=AU; o=The State of Queensland; ou=Parliament of Queensland">
+<meta name="DCTERMS.publisher" scheme="AGLSTERMS.AGLSAGENT" content="corporateName= Queensland Parliamentary Service; jurisdiction=Queensland">
+<meta name="AGLSTERMS.jurisdiction" scheme="AGLSTERMS.AglsJuri" content="QLD">
+<meta name="DCTERMS.rights" scheme="DCTERMS.URI" content=" http://creativecommons.org/licenses/by-nc-sa/3.0/au/">
+<meta name="DCTERMS.Audience" scheme="AGLSTERMS.agls-audience" content="All">
+<meta name="DCTERMS.Format" scheme="DCTERMS.IMT" content="text/html">
+<meta name="robots" content="index, follow">
+<meta name="DCTERMS.description" xml:lang="en-AU" content="Following the creation of Queensland on 6 June 1859, the colony’s first Governor, Sir George Ferguson Bowen, was appointed on 10 December 1859. Governor Bowen selected Sir Robert George Wyndham Herbert to serve as Colonial Secretary and lead an interim government untilelections for the first parliament were held. ">
+<meta name="DCTERMS.title" content="Former Members Bio">
+<meta name="DCTERMS.created" scheme="DCTERMS.ISO8601" content="2012-07-12">
+<meta name="DCTERMS.modified" scheme="DCTERMS.ISO8601" content="2015-01-27">
+<meta name="DCTERMS.identifier" scheme="DCTERMS.URI" content="http://www.parliament.qld.gov.au/members/former/bio">
+<meta name="DCTERMS.type" scheme="DCTERMS.DCMIType" content="">
+<meta name="AGLSTERMS.documentType" scheme="AGLSTERMS.agls-document" content="">
+<link rel="shortcut icon" href="/img/QLDparliament.ico">
+<link rel="stylesheet" type="text/css" href="/css/style.css">
+<script type="text/javascript" src="/js/jquery-1.4.2.min.js"></script><script src="/js/jquery.jcarousel.min.js" type="text/javascript"></script><meta name="VIcurrentDateTime" content="637272345478672220">
+<script type="text/javascript" src="/layouts/system/VisitorIdentification.js"></script><script language="javascript" type="text/javascript">
+// <!CDATA[
+    // Functions to simulate a form submission 
+    // to a non .NET form from a .NET page...
+
+    function DoISYSsearch() {
+        var SearchForm = document.forms[0];
+        var URL = "search.htm?";
+
+        var FirstVar = true;
+        var StrAdvanced = "";
+        var hasSelectedMember = false;
+        var SelValue = "";
+
+        var strSearch1 = "";
+        var strSearch2 = "";
+        var blnFoundSearchStr = false;
+        var strSearchText = "";
+        
+        
+        var section = "";
+
+        strSearch1 = SearchForm.txtSearchField1.value;
+        strSearch2 = SearchForm.txtSearchField2.value;
+
+        if (strSearch1 != "" && strSearch1 != "Enter search keywords") {
+            if (SearchForm.chkExactPhrase1.checked) {
+                if (escape(strSearch1.charAt(0)) == "%22")
+                    URL = URL + "IW_FIELD_WEB_STYLE=" + escape(strSearch1);
+                else
+                    URL = URL + "IW_FIELD_WEB_STYLE=" + "%22" + escape(strSearch1) + "%22";
+            } else {
+                URL = URL + "IW_FIELD_WEB_STYLE=" + escape(strSearch1);
+            }
+            FirstVar = false;
+            blnFoundSearchStr = true;
+            strSearchText = strSearch1;
+        }
+        
+        if (strSearch2 != "" && strSearch2 != "Enter search keywords") {
+            if (SearchForm.chkExactPhrase2.checked) {
+                if (escape(strSearch2.charAt(0)) == "%22")
+                    URL = URL + "IW_FIELD_WEB_STYLE=" + escape(strSearch2);
+                else
+                    URL = URL + "IW_FIELD_WEB_STYLE=" + "%22" + escape(strSearch2) + "%22";
+            } else
+                URL = URL + "IW_FIELD_WEB_STYLE=" + escape(strSearch2);
+            FirstVar = false;
+            blnFoundSearchStr = true;
+            strSearchText = strSearch2;
+         }
+
+        
+        for (var i = 0; i < SearchForm.elements.length; i++) {
+            
+           if (SearchForm.elements[i].name != "undefined" && SearchForm.elements[i].name != "" && SearchForm.elements[i].name != null) {
+               if (SearchForm.elements[i].name.match("IW_")) {
+
+                    if (SearchForm.elements[i].value != "" && SearchForm.elements[i].value != "Enter search keywords") {
+                        if (!FirstVar)
+                            URL = URL + "&"
+                        FirstVar = false;
+                        if (SearchForm.elements[i].name != "IW_DATABASE")
+                            URL = URL + SearchForm.elements[i].name + "=" + escape(SearchForm.elements[i].value);
+                        else
+                            URL = URL + SearchForm.elements[i].name + "=" + SearchForm.elements[i].value;
+                    }
+                }
+                if (SearchForm.elements[i].name.match("ddlSearchFor")) {
+                    section = SearchForm.ddlSearchFor.value;
+                }
+            }
+        }
+
+
+       switch(section)
+            {
+
+                case "hansard":
+                    var optionElems = document.getElementById("main_0_columncontent_0_content_1_FILTER_PATH_HANSARD").getElementsByTagName("option");
+                    for (var i = 0; i < optionElems.length; i++) {
+                        if (optionElems[i].selected) {
+                            StrAdvanced = StrAdvanced + "&IW_FILTER_PATH=\\" + optionElems[i].value + "\\"
+                        }
+                    }
+
+                    if (SearchForm.elements["IW_FIELD_ADVANCE_AND"].value == "" && SearchForm.elements["IW_FIELD_ADVANCE_PHRASE"].value == "") {
+                        if (SearchForm.elements["IW_FIELD_TEXT"].value.length < 1)
+                            StrAdvanced = StrAdvanced + "&IW_FIELD_ADVANCE_AND=*";
+                    }
+
+                    URL = URL.replace("IW_DATABASE=Sitecore;Committees;ePetitions;Tabled_Papers_Index;QuestionsOnNotice", "IW_DATABASE=Hansard");
+
+                    blnFoundSearchStr = true;
+                    break;
+                    
+                case "committees":
+                    optionElems = document.getElementById("main_0_columncontent_0_content_1_FILTER_PATH_COMMITTEES").getElementsByTagName("option");
+                    for (var i = 0; i < optionElems.length; i++) {
+                        if (optionElems[i].selected) {
+                            StrAdvanced = StrAdvanced + "&IW_FILTER_PATH=\\" + optionElems[i].value + "\\"
+                        }
+                    }
+
+                    if (SearchForm.elements["IW_FIELD_ADVANCE_AND"].value == "" && SearchForm.elements["IW_FIELD_ADVANCE_PHRASE"].value == "") {
+                        if (SearchForm.elements["IW_FIELD_TEXT"].value.length < 1)
+                            StrAdvanced = StrAdvanced + "&IW_FIELD_ADVANCE_AND=*";
+                    }
+
+                    URL = URL.replace("IW_DATABASE=Sitecore;Committees;ePetitions;Tabled_Papers_Index;QuestionsOnNotice", "IW_DATABASE=Committees");
+                    blnFoundSearchStr = true;
+
+                    break;
+                    
+                case "qon":
+                    optionElems = document.getElementById("main_0_columncontent_0_content_1_FILTER_PATH_QON").getElementsByTagName("option");
+                    for (var i = 0; i < optionElems.length; i++) {
+                        if (optionElems[i].selected) {
+                            StrAdvanced = StrAdvanced + "&IW_FILTER_PATH=\\" + optionElems[i].value + "\\"
+                        }
+                    }
+
+                    if (SearchForm.elements["IW_FIELD_ADVANCE_AND"].value == "" && SearchForm.elements["IW_FIELD_ADVANCE_PHRASE"].value == "") {
+                        if (SearchForm.elements["IW_FIELD_TEXT"].value.length < 1)
+                            StrAdvanced = StrAdvanced + "&IW_FIELD_ADVANCE_AND=*";
+                    }
+
+                    URL = URL.replace("IW_DATABASE=Sitecore;Committees;ePetitions;Tabled_Papers_Index;QuestionsOnNotice", "IW_DATABASE=QuestionsOnNotice");
+                    blnFoundSearchStr = true;
+
+                    break;
+                    
+                case "np":
+                    optionElems = document.getElementById("main_0_columncontent_0_content_1_FILTER_PATH_NP").getElementsByTagName("option");
+                    for (var i = 0; i < optionElems.length; i++) {
+                        if (optionElems[i].selected) {
+                            StrAdvanced = StrAdvanced + "&IW_FILTER_PATH=\\" + optionElems[i].value + "\\"
+                        }
+                    }
+
+                    if (SearchForm.elements["IW_FIELD_ADVANCE_AND"].value == "" && SearchForm.elements["IW_FIELD_ADVANCE_PHRASE"].value == "") {
+                        if (SearchForm.elements["IW_FIELD_TEXT"].value.length < 1)
+                            StrAdvanced = StrAdvanced + "&IW_FIELD_ADVANCE_AND=*";
+                    }
+
+                    URL = URL.replace("IW_DATABASE=Sitecore;Committees;ePetitions;Tabled_Papers_Index;QuestionsOnNotice", "IW_DATABASE=NoticePapers");
+
+                    blnFoundSearchStr = true;
+                    break;
+
+                case "speeches":
+                    optionElems = document.getElementById("main_0_columncontent_0_content_1_FILTER_PATH_SPEECHES").getElementsByTagName("option");
+                    for (var i = 0; i < optionElems.length; i++) {
+                        if (optionElems[i].selected) {
+                            StrAdvanced = StrAdvanced + "&IW_FILTER_PATH=\spk" + optionElems[i].value + "\\"
+                        }
+                    }
+
+                   optionElems = document.getElementById("main_0_columncontent_0_content_1_FILTER_PATH_CURRENT").getElementsByTagName("option");
+                    for (var i = 0; i < optionElems.length; i++) {
+                        if (optionElems[i].selected && optionElems[i].value != "") {
+                            var optionSelectedValue = optionElems[i].value;
+                            if (optionSelectedValue.indexOf("~") > 0) {
+                                var selValueLength = optionSelectedValue.length;
+                                var selValueIndexPlus = optionSelectedValue.indexOf("+");
+                                var surname = optionSelectedValue.substr(selValueIndexPlus + 2, selValueLength);
+                                var firstnames = optionSelectedValue.substr(0, selValueIndexPlus);
+                                var temp = new Array();
+                                temp = firstnames.split("~");
+
+                                SelValue += "&IW_FIELD_TEXT=(AUTHOR CONTAINS (" + temp[0] + " " + surname + " OR " + temp[1] + " " + surname + ")) OR FILENAME(" + temp[0] + " " + surname + " spk* OR " + temp[1] + " " + surname + " spk*)";
+                               
+                            }
+                            else {
+                                SelValue += "&IW_FIELD_TEXT=(AUTHOR CONTAINS (" + optionSelectedValue + ")) OR FILENAME(" + optionSelectedValue + " spk*)";
+                                
+                            }
+
+                            if (SearchForm.elements["IW_FIELD_ADVANCE_AND"].value != "") {
+                                var strTmp = SearchForm.elements["IW_FIELD_ADVANCE_AND"].value;
+                                strTmp = strTmp.replace(" ", "%20");
+                                URL = URL.replace(strTmp, "");
+                                URL = URL.replace("IW_FIELD_ADVANCE_AND=", "");
+
+                                URL = URL.replace("?&", "?");
+                                SelValue += " AND " + SearchForm.elements["IW_FIELD_ADVANCE_AND"].value + " ";
+                            }
+
+                            
+                            if (SearchForm.elements["IW_FIELD_ADVANCE_NOT"].value != "") {
+                                var strTmp = SearchForm.elements["IW_FIELD_ADVANCE_NOT"].value;
+                                strTmp = strTmp.replace(" ", "%20");
+                                URL = URL.replace(strTmp, "");
+                                URL = URL.replace("IW_FIELD_ADVANCE_NOT=", "");
+                                URL = URL.replace("?&", "?");
+                                SelValue += " NOT " + SearchForm.elements["IW_FIELD_ADVANCE_NOT"].value + " ";
+                            }
+                            SelValue = SelValue.replace(",", "");
+                            SelValue = SelValue.replace("'", "%27");
+                            SelValue = SelValue.replace("'", "%27");
+                            SelValue = SelValue.replace("'", "%27");
+                            SelValue = SelValue.replace("'", "%27");
+                            StrAdvanced = StrAdvanced + SelValue;
+                            hasSelectedMember = true;
+
+                        }
+                    }
+
+                    optionElems = document.getElementById("main_0_columncontent_0_content_1_FILTER_PATH_PAST").getElementsByTagName("option");
+                    for (var i = 0; i < optionElems.length; i++) {
+                        if (optionElems[i].selected && optionElems[i].value != "") {
+                            var optionSelectedValue = optionElems[i].value;
+                            if (optionSelectedValue.indexOf("~") > 0) {
+                                var selValueLength = optionSelectedValue.length;
+                                var selValueIndexPlus = optionSelectedValue.indexOf("+");
+                                var surname = optionSelectedValue.substr(selValueIndexPlus + 2, selValueLength);
+                                var firstnames = optionSelectedValue.substr(0, selValueIndexPlus);
+                                var temp = new Array();
+                                temp = firstnames.split("~");
+
+                                SelValue += "&IW_FIELD_TEXT=(AUTHOR CONTAINS (" + temp[0] + " " + surname + " OR " + temp[1] + " " + surname + ")) OR FILENAME(" + temp[0] + " " + surname + " spk* OR " + temp[1] + " " + surname + " spk*)";
+
+                            }
+                            else {
+                                SelValue += "&IW_FIELD_TEXT=(AUTHOR CONTAINS (" + optionSelectedValue + ")) OR FILENAME(" + optionSelectedValue + " spk*)";
+
+                            }
+
+                            if (SearchForm.elements["IW_FIELD_ADVANCE_AND"].value != "") {
+                                var strTmp = SearchForm.elements["IW_FIELD_ADVANCE_AND"].value;
+                                strTmp = strTmp.replace(" ", "%20");
+                                URL = URL.replace(strTmp, "");
+                                URL = URL.replace("IW_FIELD_ADVANCE_AND=", "");
+
+                                URL = URL.replace("?&", "?");
+                                SelValue += " AND " + SearchForm.elements["IW_FIELD_ADVANCE_AND"].value + " ";
+                            }
+
+
+                            if (SearchForm.elements["IW_FIELD_ADVANCE_NOT"].value != "") {
+                                var strTmp = SearchForm.elements["IW_FIELD_ADVANCE_NOT"].value;
+                                strTmp = strTmp.replace(" ", "%20");
+                                URL = URL.replace(strTmp, "");
+                                URL = URL.replace("IW_FIELD_ADVANCE_NOT=", "");
+                                URL = URL.replace("?&", "?");
+                                SelValue += " NOT " + SearchForm.elements["IW_FIELD_ADVANCE_NOT"].value + " ";
+                            }
+                            SelValue = SelValue.replace(",", "");
+                            SelValue = SelValue.replace("'", "%27");
+                            SelValue = SelValue.replace("'", "%27");
+                            SelValue = SelValue.replace("'", "%27");
+                            SelValue = SelValue.replace("'", "%27");
+                            StrAdvanced = StrAdvanced + SelValue;
+                            hasSelectedMember = true;
+
+                        }
+                    }
+                    //for (var i = 0; i < optionElems.length; i++) {
+                    //    if (optionElems[i].selected && optionElems[i].value != "") {
+			   
+                    //        StrAdvanced += "&IW_FIELD_TEXT=(AUTHOR CONTAINS (" + optionElems[i].value + ")) OR FILENAME(" + optionElems[i].value + " spk*)";
+
+                    //      //  StrAdvanced = StrAdvanced + "&IW_FILTER_FNAME_LIKE=" + optionElems[i].value + " spk*"
+                    //     //   StrAdvanced = StrAdvanced + "&IW_FIELD_ADVANCE_AND=*";
+                    //        if (SearchForm.elements["IW_FIELD_ADVANCE_AND"].value != "") {
+                    //            var strTmp = SearchForm.elements["IW_FIELD_ADVANCE_AND"].value;
+                    //            strTmp = strTmp.replace(" ", "%20");
+                    //            URL = URL.replace(strTmp, "");
+                    //            URL = URL.replace("IW_FIELD_ADVANCE_AND=", "");
+
+                    //            URL = URL.replace("?&", "?");
+                    //            SelValue += " AND " + SearchForm.elements["IW_FIELD_ADVANCE_AND"].value + " ";
+                    //        }
+
+
+                    //        if (SearchForm.elements["IW_FIELD_ADVANCE_NOT"].value != "") {
+                    //            var strTmp = SearchForm.elements["IW_FIELD_ADVANCE_NOT"].value;
+                    //            strTmp = strTmp.replace(" ", "%20");
+                    //            URL = URL.replace(strTmp, "");
+                    //            URL = URL.replace("IW_FIELD_ADVANCE_NOT=", "");
+                    //            URL = URL.replace("?&", "?");
+                    //            SelValue += " NOT " + SearchForm.elements["IW_FIELD_ADVANCE_NOT"].value + " ";
+                    //        }
+                    //        SelValue = SelValue.replace(",", "");
+                    //        SelValue = SelValue.replace("'", "%27");
+                    //        StrAdvanced = StrAdvanced + SelValue;
+                    //        hasSelectedMember = true;
+                    //    }
+
+
+                    //}
+
+                    if (SearchForm.elements["IW_FIELD_ADVANCE_AND"].value == "" && SearchForm.elements["IW_FIELD_ADVANCE_PHRASE"].value == "") {
+                        if (!hasSelectedMember )
+                            StrAdvanced = StrAdvanced + "&IW_FIELD_ADVANCE_AND=*";
+                    }
+
+                    URL = URL.replace("IW_DATABASE=Sitecore;Committees;ePetitions;Tabled_Papers_Index;QuestionsOnNotice", "IW_DATABASE=Speeches");
+                    blnFoundSearchStr = true;
+                    StrAdvanced = StrAdvanced + "&IW_SORT=-DATETIME";
+                    StrAdvanced = StrAdvanced.replace("'", "%27");
+
+                    break;
+                case "all":
+                    if (SearchForm.elements["IW_FIELD_ADVANCE_AND"].value == "" && SearchForm.elements["IW_FIELD_ADVANCE_PHRASE"].value == "") {
+                        if (SearchForm.elements["IW_FIELD_TEXT"].value.length < 1)
+                            StrAdvanced = StrAdvanced + "&IW_FIELD_ADVANCE_AND=*";
+                    }
+                    blnFoundSearchStr = true;
+                    break; 
+               case "petitions":
+
+                   if (SearchForm.elements["IW_FIELD_ADVANCE_AND"].value == "" && SearchForm.elements["IW_FIELD_ADVANCE_PHRASE"].value == "") {
+                       if (SearchForm.elements["IW_FIELD_TEXT"].value.length < 1)
+                           StrAdvanced = StrAdvanced + "&IW_FIELD_ADVANCE_AND=*";
+                   }
+
+                    URL = URL.replace("IW_DATABASE=Sitecore;Committees;ePetitions;Tabled_Papers_Index;QuestionsOnNotice", "IW_DATABASE=ePetitions");
+
+                    blnFoundSearchStr = true;
+                    break;
+                case "tabledPapers":
+
+                    if (SearchForm.elements["IW_FIELD_ADVANCE_AND"].value == "" && SearchForm.elements["IW_FIELD_ADVANCE_PHRASE"].value == "") {
+                        if (SearchForm.elements["IW_FIELD_TEXT"].value.length < 1)
+                            StrAdvanced = StrAdvanced + "&IW_FIELD_ADVANCE_AND=*";
+                    }
+
+                    URL = URL.replace("IW_DATABASE=Sitecore;Committees;ePetitions;Tabled_Papers_Index;QuestionsOnNotice", "IW_DATABASE=Tabled_Papers_Index");
+
+                    blnFoundSearchStr = true;
+                    break;
+            }
+     
+            URL = URL + StrAdvanced;
+            
+            if (blnFoundSearchStr) {
+                SearchForm.searchParams.value = URL;
+                SearchForm.searchText.value = strSearchText;
+               //   alert(URL);
+                SearchForm.action = "/global/search/";
+               // SearchForm.action = "/global/search-rest-results/";
+                SearchForm.submit();
+        }
+
+        return true;
+    }
+
+    function DoISYSsearchAlternate(params) {
+        var SearchForm = document.forms[0];
+
+        SearchForm.searchParams.value = "search.htm" + params;
+        
+        SearchForm.action = "/global/search-rest-results/";
+        SearchForm.submit();
+
+    }
+
+    function DoISYSsearchOnEnter(e) {
+        var Keynum;
+
+        if (window.event) // IE 
+            Keynum = e.keyCode;
+        else if (e.which) // Netscape/Firefox/Opera 
+            Keynum = e.which;
+        if (Keynum == 13) {
+            DoISYSsearch();
+            return false;
+        }
+        return true;
+    }
+
+    function clearField(option) {
+
+        var f = this.document.forms[0];
+        switch (option) {
+            case 1: f.txtSearchField1.value = "";
+                break;
+            case 2: f.txtSearchField2.value = "";
+                break;
+        }
+    }
+
+// ]]>
+      </script>
+</head>
+<body>
+  
+  <form method="post" action="/members/former/bio?id=573119901" id="mainform">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE5OTQ1ODYxMGRkUWg5y9p+Ixp63Ri4uRr42ORJkwA=">
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="D3BF1290"><input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAALiZMHhHGMbhrhUNF35uIzVcxY2GPzVGTAkwRgUM7wYd8MXc+fjZjNtBmgQpj9M4FnDtgwq">
+</div>
+  <!-- ISYSINDEXINGOFF -->
+  
+  <div class="base">
+    <a href="/global/accessibility"><img src="/img/onebyone.gif" alt="Welcome to the Queensland Parliament web site - accessibility access keys available by clicking here or by using access key 9, sitemap available under access key 2" border="0" width="0" height="0"></a><a href="#content"><img src="img/onebyone.gif" alt="Skip to Main Content or by using access key 0" border="0" width="0" height="0"></a><a href="/global/accessibility" accesskey="9"><img src="img/onebyone.gif" alt="View Access Keys" border="0" width="0" height="0"></a><a href="/global/sitemap" accesskey="2"><img src="img/onebyone.gif" alt="Go to sitemap" border="0" width="0" height="0"></a><a href="/global/useful-links" accesskey="3"><img src="img/onebyone.gif" alt="Go to useful links" border="0" width="0" height="0"></a><a href="/global/contact-us" accesskey="4"><img src="img/onebyone.gif" alt="Go to contact us" border="0" width="0" height="0"></a><a href="/work-of-assembly/sitting-dates/latest-sitting-dates" accesskey="5"><img src="img/onebyone.gif" alt="Go to latest sitting week" border="0" width="0" height="0"></a><a href="/members/current/list" accesskey="6"><img src="img/onebyone.gif" alt="Go to current members list" border="0" width="0" height="0"></a><a href="/global/accessibility" accesskey="9"><img src="img/onebyone.gif" alt="View Access Keys" border="0" width="0" height="0"></a><a class="secureLeft" title="Remote Access" href="/global/Remote-Access">Remote Access</a><div class="global-links">
+<a title="Parliamentary Service" href="/global/parliamentary-service">Parliamentary Service</a> |
+                    <a title="A - Z" href="/global/a-z">A - Z</a> |
+                    <a title="Contact Us" href="/global/contact-us">Contact Us</a> |
+                    <a title="Useful Links" href="/global/useful-links">Useful Links</a> |
+                    <a title="Frequently Asked Questions" href="/global/faqs">Frequently Asked Questions</a> |
+                    <a target="_blank" class="secure" href="http://library.parliament.qld.gov.au/">
+            Login to Parliamentary Library
+        </a>
+</div>
+<div class="clear"></div>
+    <div class="header">
+        <div class="content">
+            <div class="logo"><a href="/" accesskey="1"><img src="/img/parliament-logo.png" width="112" height="106" alt="Queensland parliament" border="0"></a></div>
+            <p><a href="/">Queensland Parliament</a></p>
+            <div class="search search-header">
+                <h4>I am looking for...</h4>
+                <div class="right">
+                    <a href="/global/advanced-search" class="advanced">Advanced Search</a>
+                </div>
+                <div class="clear"></div>
+				<div class="searchForm">
+                    <label class="hideLabel" for="txtSearchField1" title="I am looking for"></label> <input onfocus="clearField(1)" id="txtSearchField1" name="txtSearchField1" type="text" class="searchTextBox" value="Enter search keywords" onkeypress="return DoISYSsearchOnEnter(event);"><input accesskey="7" name="Search" class="submit" type="image" src="/img/btn-search.png" onclick="DoISYSsearch()" alt="Search"><br><label for="chkExactPhrase1" class="smallWhiteRight">Search for the exact phrase <input type="checkbox" name="chkExactPhrase1" id="chkExactPhrase1" checked></label>
+                
+                <input type="hidden" name="searchParams" value=""><input type="hidden" name="searchText" value="">
+</div>
+            </div>
+            <div class="clear"></div>
+            
+            <div class="topNavigation"><ul id="main-nav">
+<li><a title="Home" href="/">Home</a></li>
+<li class="main-nav-item"><a class="main-nav-tab" title="Explore Your Parliament" href="/explore">Explore Your Parliament</a></li>
+<li class="main-nav-item"><a class="main-nav-tab" title="Work of the Assembly" href="/work-of-assembly">Work of the Assembly</a></li>
+<li class="main-nav-item"><a class="main-nav-tab" title="Work of Committees " href="/work-of-committees">Work of Committees</a></li>
+<li class="main-nav-item"><a class="current" title="Members" href="/members">Members</a></li>
+<li class="main-nav-item"><a class="main-nav-tab" title="Get Involved" href="/get-involved">Get Involved</a></li>
+</ul></div>
+                     
+        </div>
+        <div class="clear"></div>
+    </div>
+   <!-- ISYSINDEXINGON  -->
+   <div class="page-content">
+      <a name="content" accesskey="0"></a>
+    <div class="breadcrumb">
+<a title="Home" href="/">Home</a><a title="Members" href="/members">Members</a><a title="Former Members" href="/members/former">Former Members</a>Members Biography</div>
+<!-- two column layout-->
+<div class="sidebar-left">
+    <div class="standard-box">
+<h4>
+	<a href="/members" title="Members">Members</a>
+</h4>
+<ul class="side-menu">
+<li><a href="/members/current" title="Current Members (including Ministers and shadow Ministers)">Current Members (including Ministers and shadow Ministers)</a></li>
+<li>
+<a href="/members/former" title="Former Members" class="parent">Former Members</a><ul>
+<li><a href="/members/former/member-register" title="Former Members Register">Former Members Register</a></li>
+<li><a href="/members/former/contacting-former-members" title="Contacting Former Members">Contacting Former Members</a></li>
+<li><a href="/members/former/first-parliament" title="Members of the first Parliament - 1860 ">Members of the first Parliament</a></li>
+	</ul>
+</li>
+<li><a href="/members/entitlements" title="Members&amp;#39; and Former Members&amp;#39; Entitlements">Members' and Former Members' Entitlements</a></li>
+</ul>
+</div>
+</div>
+<div class="two-columns-content">
+    
+
+<div class="standard-box standard-box-content">
+    <div class="full-content">
+	<div>
+		
+	</div>
+<div>
+		<p> </p>
+	</div>
+<div class="linebreak">
+
+	</div>
+</div>
+<input type="hidden" name="main_0$columncontent_0$content_1$hdnMemberParams" id="main_0_columncontent_0_content_1_hdnMemberParams"><script language="javascript">
+
+    function DoSpeechSearch() {
+        var f = this.document.forms[0];
+        f.main_0$columncontent_0$content_1$hdnMemberParams.value = f.main_0_columncontent_0_content_1_hdnMemberParams.value.replace("'", "%27");
+        f.action = "/global/search/";
+        f.submit();
+    }
+
+</script><div class="member-heading">
+    <div class="left"><h1>Woods,  Michael Joyce Reginald (Mick)</h1></div>
+<div class="right-print-icon">
+        <a href="/members/former/bio?id=573119901&amp;p=1" target="_blank" title="View print friendly version (opens in a new window)"><img src="/img/ico-print.jpg" width="40" height="34" align="right" border="0" alt="View print friendly version"></a> </div>
+</div>
+<div class="clear"></div>
+<div id="main_0_columncontent_0_content_1_pnlMemberBio">
+	
+<div class="member-bio">
+     <h3>Personal</h3>
+    <div class="left">
+        <img id="main_0_columncontent_0_content_1_MemberImage" class="photo" src="data:image/jpg;base64,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" style="height:249px;width:200px;"><br>
+</div>
+    <div class="left" style="width: 460px">
+    
+            <p><strong>Birth Date:</strong> 1857 (Parramatta, New South Wales, Australia)
+            </p>
+<p><strong>Death Date:</strong> 12 November 1934 (Brisbane, Queensland, Australia)  
+            </p>
+<p><strong>Parents:</strong> Michael Woods and Sarah (nee McCreah)</p> 
+            <p><strong>Family:</strong> (2) Deborah Ann Gilbert in Dalby on 23 July 1888, 3 sons, 3 daughters, (1) Bridget Pickering in Dalby on 12 August 1879, 3 sons 
+             
+            </p>
+<p><strong>Education:</strong> Educated in Goulburn</p> 
+            <p><strong>Religion:</strong> Roman Catholic</p> 
+            
+     </div>
+    <div class="clear">
+    </div>
+    <h3>Career</h3>
+        <p>Miner and engine driver, Chillagoe private railway; Entered employment with Queensland Railways, 1910; Located with Queensland Railways to Cairns, 1915-1930</p>
+        
+        
+        
+        
+        
+        
+    <br><h3>Parliamentary Representation:</h3>
+            <table width="100%" class="BottomDottedBorder" cellspacing="5" cellpadding="0">
+<tr>
+<th width="20%">House</th>
+                      <th width="10%">Party</th>
+                      <th width="25%">Electorate</th>
+                      <th width="15%">From</th>
+                    <th width="15%">To</th>
+                    <th width="20%">Elected/Departure Reason</th>                      
+                </tr>
+<tr>
+<td>Assembly </td>
+                <td>ALP</td>
+                <td>Woothakata</td>
+                <td>11 Mar 1902</td>
+                <td>18 May 1907</td>
+                <td></td>
+            </tr>
+<tr>
+<td>Assembly </td>
+                <td>MIN</td>
+                <td>Woothakata</td>
+                <td>18 May 1907</td>
+                <td>19 Nov 1907</td>
+                <td></td>
+            </tr>
+<tr>
+<td>Assembly </td>
+                <td>OPP</td>
+                <td>Woothakata</td>
+                <td>19 Nov 1907</td>
+                <td>18 Feb 1908</td>
+                <td></td>
+            </tr>
+<tr>
+<td>Assembly </td>
+                <td>MIN</td>
+                <td>Woothakata</td>
+                <td>18 Feb 1908</td>
+                <td>29 Oct 1908</td>
+                <td></td>
+            </tr>
+<tr>
+<td>Assembly </td>
+                <td>INDO</td>
+                <td>Woothakata</td>
+                <td>29 Oct 1908</td>
+                <td>2 Oct 1909</td>
+                <td></td>
+            </tr>
+</table>
+<br><p></p>
+
+    
+
+      <h3>Additional Information</h3>
+    <p><strong>Notes:</strong> Drove the first Atherton-Herberton train</p>
+    
+    <p><strong>Sources:</strong> Image sourced from 'The Queenslander', 5 July 1902; Waterson, DB, A Biographical Register of the Queensland Parliament: 1860-1929, 2nd revised edition (Sydney: Casket Publications, 2001)</p>
+
+    <div class="smallRight-DateTrue"></div>
+
+
+</div>
+</div>
+
+
+
+    <div class="clear"></div>
+</div>
+
+</div>
+<div class="clear">
+</div>
+        
+    </div>
+      <!-- ISYSINDEXINGOFF -->
+    <div class="footer">
+    	<div>
+            <div class="logo left"><img src="/img/parliament-logo-footer.png" width="45" height="45" alt="Queensland parliament"></div>
+            <h1 class="left"><a href="/">Queensland Parliament</a></h1>
+            <div class="search">
+                <h4>I am looking for...</h4>
+                <div class="advanced right">
+                    <a href="/global/advanced-search">Advanced search</a>
+                </div>
+                <div class="clear"></div>
+				<div class="searchForm">
+                    <label class="hideLabel" for="txtSearchField2" title="I am looking for"></label><input onfocus="clearField(2)" id="txtSearchField2" name="txtSearchField2" type="text" class="searchTextBox" value="Enter search keywords" onkeypress="return DoISYSsearchOnEnter(event);"><input name="Search" class="submit" type="image" src="/img/btn-search.png" onclick="DoISYSsearch()" alt="Search"><br><label for="chkExactPhrase2" class="smallWhiteRight">Search for the exact phrase <input type="checkbox" name="chkExactPhrase2" id="chkExactPhrase2" checked></label>
+                   <!--  <input type="hidden" name="IW_SORT" value="HITS" /> -->
+                    <input type="hidden" name="IW_BATCHSIZE" value="10"><input type="hidden" name="IW_DATABASE" value="Sitecore;Committees;ePetitions;Tabled_Papers_Index;QuestionsOnNotice">
+</div>
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="linebreak"></div>
+        <div>
+	<div class="footer-section">
+		<a href="/explore" title="Explore Your Parliament" class="footer-section-name">Explore Your Parliament</a><ul>
+<li><a href="/explore/about-us" title="About Us">About Us</a></li>
+<li><a href="/explore/education" title="Education">Education</a></li>
+<li><a href="/explore/history" title="History">History</a></li>
+<li><a href="/explore/media-releases" title="Media Releases">Media Releases</a></li>
+<li><a href="/explore/visitors" title="Visitors">Visitors</a></li>
+<li><a href="/explore/publications-and-reports" title="Publications and Reports">Publications and Reports</a></li>
+<li><a href="/explore/contact-us" title="Contact Us">Contact Us</a></li>
+		</ul>
+</div>
+<div class="footer-section">
+		<a href="/work-of-assembly" title="Work of the Assembly" class="footer-section-name">Work of the Assembly</a><ul>
+<li><a href="/work-of-assembly/whats-new" title="What has been debated today and latest documents">What's New</a></li>
+<li><a href="/work-of-assembly/sitting-dates" title="Sitting Dates">Sitting Dates</a></li>
+<li><a href="/work-of-assembly/broadcast-chamber" title="Live and Archived Broadcasts">Live and Archived Broadcasts</a></li>
+<li><a href="/work-of-assembly/sitting-dates/latest-sitting-dates" title="Daily Agenda (Notice Paper)">Daily Agenda (Notice Paper)</a></li>
+<li><a href="/work-of-assembly/hansard" title="Record of Proceedings (Hansard)">Record of Proceedings (Hansard)</a></li>
+<li><a href="/work-of-assembly/RightofReply" title="Citizen’s Right of Reply">Citizen’s Right of Reply</a></li>
+<li><a href="/work-of-assembly/petitions" title="Petitions">Petitions</a></li>
+<li><a href="/work-of-assembly/bills-and-legislation" title="Bills and Legislation">Bills and Legislation</a></li>
+<li><a href="/work-of-assembly/question-on-notice" title="Questions on Notice and Answers">Questions on Notice and Answers</a></li>
+<li><a href="/work-of-assembly/tabled-papers" title="Tabled Papers">Tabled Papers</a></li>
+<li><a href="/work-of-assembly/procedures" title="Procedures">Procedures</a></li>
+		</ul>
+</div>
+<div class="footer-section">
+		<a href="/work-of-committees" title="Work of Committees " class="footer-section-name">Work of Committees</a><ul>
+<li><a href="/work-of-committees/Upcoming-Committee-Business" title="Upcoming Committee Business">Upcoming Committee Business</a></li>
+<li><a href="/work-of-committees/introduction" title="Introduction">Introduction</a></li>
+<li><a href="/work-of-committees/Training" title="Training seminar for public sector officers">Training seminar - <span class="__cf_email__" data-cfemail="d093bfbdbdb9a4a4b5b5a39087bfa2bb">[email protected]</span></a></li>
+<li><a href="/work-of-committees/committees" title="Committees">Committees (10)</a></li>
+<li><a href="/work-of-committees/Estimates" title="Estimates Hearings">Estimates Hearings</a></li>
+<li><a href="/work-of-committees/inquiries" title="Committee Inquiries">Inquiries</a></li>
+<li><a href="/work-of-committees/broadcast-committee" title="Live and Archived Broadcasts">Live and Archived Broadcasts</a></li>
+<li><a href="/work-of-committees/publications" title="Committee Publications">Publications</a></li>
+<li><a href="/work-of-committees/Guidelines" title="Guidelines">Guidelines (4)</a></li>
+<li><a href="/get-involved/how-do-I-get-involved/email-alert" title="Subscribe">Subscribe</a></li>
+<li><a href="/work-of-committees/past-alert-digests" title="Past Alert Digest and Legislation Alert Indexes">Past Alert Digest and Legislation Alert Indexes</a></li>
+<li><a href="/work-of-committees/former-committees" title="Former Committees">Former Committees (44)</a></li>
+<li><a href="/work-of-committees/30YearRelease" title="30 Year Release">30 Year Release</a></li>
+		</ul>
+</div>
+<div class="footer-section">
+		<a href="/members" title="Members" class="footer-section-name">Members</a><ul>
+<li><a href="/members/current" title="Current Members (including Ministers and shadow Ministers)">Current Members (including Ministers and shadow Ministers)</a></li>
+<li><a href="/members/former" title="Former Members">Former Members</a></li>
+<li><a href="/members/entitlements" title="Members&amp;#39; and Former Members&amp;#39; Entitlements">Members' and Former Members' Entitlements</a></li>
+		</ul>
+</div>
+<div class="footer-section">
+		<a href="/get-involved" title="Get Involved" class="footer-section-name">Get Involved</a><ul>
+<li><a href="/get-involved/how-do-I-get-involved" title="How Do I Get Involved?">How Do I Get Involved?</a></li>
+<li><a href="/get-involved/whats-new" title="What&amp;#39;s New">What's New</a></li>
+<li><a href="/get-involved/have-your-say" title="Have Your Say">Have Your Say</a></li>
+<li><a href="/get-involved/what-I-learnt" title="What I Learnt in Parliament Today">What I Learnt in Parliament Today</a></li>
+<li><a href="/get-involved/Speakers-Corner" title="Speakers Corner">Speakers' Corner and peaceful gatherings in front of Parliament House</a></li>
+<li><a href="/get-involved/community-engagement" title="Parliamentary Education ">Parliamentary Education </a></li>
+<li><a href="/get-involved/regional-parliament" title="Regional Parliament">Regional Parliaments</a></li>
+<li><a href="/global/contact-us" title="Contact Us">Contact Us</a></li>
+		</ul>
+</div>
+<div class="clear"></div>
+</div>
+            
+    </div>
+    <div class="footer-border-bottom"></div>
+    <div class="footer-note">
+        <div class="left">
+            Copyright © 2011 All rights reserved 
+        </div>
+        <div class="global-links right">
+<a title="Sitemap" href="/global/sitemap">Sitemap</a>
+                        |
+                      <a title="Contact Us" href="/global/contact-us">Contact Us</a>
+                        |
+                      <a title="Careers" href="/global/careers">Careers</a>
+                        |
+                      <a title="Accessibility" href="/global/accessibility">Accessibility</a>
+                        |
+                      <a title="Privacy Statement" href="/global/privacy-statement">Privacy Statement</a>
+                        |
+                      <a title="Copyright" href="/global/copyright">Copyright</a>
+                        |
+                      <a title="Disclaimer" href="/global/disclaimer">Disclaimer</a>
+</div>
+<div class="clear"></div>
+        <div class="sitemap_level_2">Warning - Aboriginal and Torres Strait Islander people are warned that this web site may contain images of deceased people.</div>
+</div>
+       
+    
+</div>
+  
+  </form>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+</body>
+</html>
